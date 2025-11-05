@@ -15,7 +15,7 @@ public class ShortcutPresenter
     private IItemSlotContext m_slot_context;
 
     public event Action<int> OnSelectedChanged;
-    public event Action<ItemCode> OnSelectedChangedToCode;
+    public event Action<ItemCode, int> OnSelectedChangedToCode;
     public event Action<int> OnUseShortcutRequested; // UseSelected 전용 이벤트
 
     public ShortcutPresenter(IShortcutView view, 
@@ -28,6 +28,8 @@ public class ShortcutPresenter
         m_view.Inject(this);
         m_slot_context = DIContainer.Resolve<IItemSlotContext>();
         m_slot_context.RegisterShortcutSelectCallback(OnShortcutSelected);
+
+        m_inventory_service.OnUpdatedSlot += UpdateSelect;
     }
 
     private void OnShortcutSelected(int index)
@@ -37,7 +39,16 @@ public class ShortcutPresenter
 
     public void Dispose()
     {
+        m_inventory_service.OnUpdatedSlot -= UpdateSelect;
         m_slot_context.UnRegisterShortcutSelectCallback();
+    }
+
+    public void UpdateSelect(int index, ItemData item_data)
+    {
+        if(0 <= index && index <= 4)
+        {
+            Select(index);
+        }
     }
 
     public void Select(int index)
@@ -51,7 +62,7 @@ public class ShortcutPresenter
         OnSelectedChanged?.Invoke(index);
 
         var item_code = m_inventory_service.GetItem(SelectedIndex).Code;
-        OnSelectedChangedToCode?.Invoke(item_code);
+        OnSelectedChangedToCode?.Invoke(item_code, index);
     }
 
     public void ScrollSelect(int delta)

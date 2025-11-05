@@ -1,3 +1,4 @@
+using InventoryService;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
@@ -13,6 +14,10 @@ public abstract class BaseTool : MonoBehaviour
     protected Collider m_collider;
     protected bool m_is_working = false;
     protected bool m_is_attacking = false;
+
+    protected IInventoryService m_inventory_service;
+
+    public int Index { get; set; }
 
     private void Awake()
     {
@@ -59,6 +64,11 @@ public abstract class BaseTool : MonoBehaviour
             var animal = collider.GetComponent<AnimalCtrl>();
             OnInteract(animal);
         }
+    }
+
+    public void Inject(IInventoryService inventory_service)
+    {
+        m_inventory_service = inventory_service;
     }
 
     protected abstract void OnLeftUse();
