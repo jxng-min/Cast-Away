@@ -24,6 +24,8 @@ public class PlayerStatus : MonoBehaviour
     public bool Thirsty => Thirst <= 30f;
     public bool Dehydrated => Thirst <= 0f;
 
+    public bool Regen => Hunger >= 80f;
+
     private void Awake()
     {
         m_controller = GetComponent<PlayerCtrl>();
@@ -109,6 +111,11 @@ public class PlayerStatus : MonoBehaviour
         if(Starving)
         {
             m_penalty_coroutine ??= StartCoroutine(Co_Penalty());
+        }
+
+        if(Regen)
+        {
+            ChangeHP(1f);
         }
     }
 

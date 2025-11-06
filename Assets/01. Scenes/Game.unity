@@ -15962,7 +15962,9 @@ MonoBehaviour:
   m_decay_interval: 1
   m_hunger_decay: -0.2
   m_running_hunger_decay: -0.4
-  m_thirst_decay: -0.2
+  m_thirst_decay: -30
+  m_hp_regen_rate: 80
+  m_hp_regen_power: 1
 --- !u!1001 &859752877
 PrefabInstance:
   m_ObjectHideFlags: 0
