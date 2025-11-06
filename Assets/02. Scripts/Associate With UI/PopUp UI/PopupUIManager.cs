@@ -17,6 +17,11 @@ public class PopupUIManager : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.GameType == GameEventType.CUTSCENE)
+        {
+            return;
+        }
+        
         // "Pause"키는 KeyCode.Escape에 매핑되어 있다.
         // ESC 키를 눌렀을 때 발생하는 행동을 정의한다.
         if (Input.GetKeyDown(m_key_service.GetKeyCode("Pause")))

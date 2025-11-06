@@ -16,11 +16,11 @@ public class ModelEventSender : MonoBehaviour
 
     public void PlayGrassWalkSFX()
     {
-        m_player_walk_state.PlaySFX();
+        m_player_walk_state?.PlaySFX();
     }
 
     public void PlayGrassRunSFX()
     {
-        m_player_run_state.PlaySFX();
+        m_player_run_state?.PlaySFX();
     }
 }

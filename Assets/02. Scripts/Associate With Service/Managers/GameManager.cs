@@ -8,12 +8,14 @@ public class GameManager : Singleton<GameManager>
     {
         GameEventBus.Subscribe(GameEventType.LOGIN, Login);
         GameEventBus.Subscribe(GameEventType.LOADING, Loading);
+        GameEventBus.Subscribe(GameEventType.CUTSCENE, CutScene);
     } 
 
     private void OnDisable()
     {
         GameEventBus.Unsubscribe(GameEventType.LOGIN, Login);
         GameEventBus.Unsubscribe(GameEventType.LOADING, Loading);
+        GameEventBus.Unsubscribe(GameEventType.CUTSCENE, CutScene);
     }
 
     private void Login()
@@ -70,5 +72,10 @@ public class GameManager : Singleton<GameManager>
     public void GameOver()
     {
         GameType = GameEventType.GAMEOVER;
+    }
+
+    public void CutScene()
+    {
+        GameType = GameEventType.CUTSCENE;
     }
 }
