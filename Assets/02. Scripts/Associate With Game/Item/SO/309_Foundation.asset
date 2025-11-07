@@ -17,5 +17,4 @@ MonoBehaviour:
   m_name: "\uD1A0\uB300"
   m_stackable: 1
   m_cool: -1
-  m_sprite: {fileID: -1655404254, guid: 1d5864d95f477c441b3d5a0ef6bd9055, type: 3}
-  m_is_default_unlocked: 1
+  m_sprite: {fileID: 21300000, guid: 28545c527b844904997244d90c4d707b, type: 3}

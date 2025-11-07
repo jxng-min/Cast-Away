@@ -668,7 +668,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -677,6 +677,72 @@ TextureImporter:
       bones: []
       spriteID: b0e4e3871430e84499781605562bd8f5
       internalID: 1590749510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paddle
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 240
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dac740f6e0db364bae154af11548f20
+      internalID: -326476021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sail
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 97
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69021372055c3a48829796774f86a24
+      internalID: -1271589873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mast
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 241
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d6c1852dbbc8140b3bce7029c4ad07
+      internalID: -671501439
       vertices: []
       indices: 
       edges: []
@@ -870,11 +936,14 @@ TextureImporter:
       Item Icon_98: -897711269
       Item Icon_99: -1139248269
       Leather: -2048984701
+      Mast: -671501439
       Mushroom1: 722956212
       Mushroom2: -129564797
+      Paddle: -326476021
       Raw Fish: 860442509
       Raw Meat: -622304887
       Rope: -1386378037
+      Sail: -1271589873
       Soup: 449918544
       Spear: -1252051298
       Stone: 1315325488

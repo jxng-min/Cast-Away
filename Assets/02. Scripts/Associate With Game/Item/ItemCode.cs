@@ -22,5 +22,5 @@ public enum ItemCode
     PLY_FOUNDATION = 315, 
 
     //뗏목 아이템(401~500)
-    RAFT_BASE = 401, MAST = 402, SAIL = 403, PADDLE = 404,
+    BOAT = 401, MAST = 402, SAIL = 403, PADDLE = 404,
 }

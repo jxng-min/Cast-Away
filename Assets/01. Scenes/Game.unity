@@ -10435,6 +10435,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd6434ba8a94f824cae626ff51345690, type: 2}
   - {fileID: 11400000, guid: ad49b418fc2e6124c8d064007ab08daf, type: 2}
   - {fileID: 11400000, guid: 6084e9a447f34ed4995ba21ec12c3638, type: 2}
+  - {fileID: 11400000, guid: b0d9e2de7d44d1e4483b03f74124eac2, type: 2}
+  - {fileID: 11400000, guid: 4e91a53c9b496d34f9a8368c48c81fc1, type: 2}
   m_moduler: {fileID: 1194113810}
   m_module_db: {fileID: 11400000, guid: 34857610a06f8834a95dda10b55fd70b, type: 2}
   m_camera_shaker: {fileID: 1194113813}
@@ -16008,8 +16010,6 @@ MonoBehaviour:
   m_hunger_decay: -0.2
   m_running_hunger_decay: -0.4
   m_thirst_decay: -0.2
-  m_hp_regen_rate: 80
-  m_hp_regen_power: 1
 --- !u!1001 &859752877
 PrefabInstance:
   m_ObjectHideFlags: 0

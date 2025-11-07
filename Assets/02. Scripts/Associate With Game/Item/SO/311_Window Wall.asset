@@ -17,5 +17,4 @@ MonoBehaviour:
   m_name: "\uCC3D\uBB38 \uBCBD"
   m_stackable: 1
   m_cool: -1
-  m_sprite: {fileID: 0}
-  m_is_default_unlocked: 1
+  m_sprite: {fileID: 21300000, guid: f8f7312d260cd9e439b04025b634d923, type: 3}
