@@ -1,5 +1,5 @@
 public enum TimelineCode
 {
     PROLOGUE = 0,
-    ENDING = 1,
+    EPILOGUE = 1,
 }
