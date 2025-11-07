@@ -43,6 +43,7 @@ public class GameManager : Singleton<GameManager>
     public void Interacting()
     {
         GameType = GameEventType.INTERACTING;
+        
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -52,6 +53,7 @@ public class GameManager : Singleton<GameManager>
     public void Crafting()
     {
         GameType = GameEventType.CRAFTING;
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -77,5 +79,8 @@ public class GameManager : Singleton<GameManager>
     public void CutScene()
     {
         GameType = GameEventType.CUTSCENE;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

@@ -143,9 +143,12 @@ public class PopupUIManager : MonoBehaviour
     {
         m_active_popup_list.Remove(presenter);
         presenter.CloseUI();
+
+        GameEventBus.Dequeue();
+
         if (m_active_popup_list.Count == 0)
         {
-            GameEventBus.Publish(GameEventType.INPLAY);
+            GameEventBus.PriorityPublish();
         }
     }
 

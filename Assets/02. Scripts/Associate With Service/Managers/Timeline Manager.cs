@@ -30,9 +30,9 @@ public class TimelineManager : MonoBehaviour
         m_director.stopped += TimelineEndHandler;
     }
 
-    private void Start()
+    public void StartTrailer(TimelineCode code)
     {
-        m_director.playableAsset = m_timeline_db.GetTimeline(TimelineCode.PROLOGUE);
+        m_director.playableAsset = m_timeline_db.GetTimeline(code);
         m_director.Play();
     }
 
@@ -47,7 +47,8 @@ public class TimelineManager : MonoBehaviour
 
     private void TimelineEndHandler(PlayableDirector director)
     {
-        GameEventBus.Publish(GameEventType.INPLAY);
+        GameEventBus.Dequeue();
+        GameEventBus.PriorityPublish();
 
         m_cut_scene_cam_group.SetActive(false);
         m_inplay_camera.Priority = 10;

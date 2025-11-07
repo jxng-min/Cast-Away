@@ -17,14 +17,6 @@ public class PlayerDecayManager : MonoBehaviour
     [Header("갈증 감소 속도")]
     [SerializeField] private float m_thirst_decay = -0.2f;
 
-    [Space(30f)]
-    [Header("체력 관련 컴포넌트")]
-    [Header("체력 회복 조건")]
-    [SerializeField] private float m_hp_regen_rate = 80f;
-
-    [Header("체력 회복력")]
-    [SerializeField] private float m_hp_regen_power = 1f;
-
     private void Start()
     {
         StartCoroutine(DecayRoutine());
