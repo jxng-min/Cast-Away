@@ -12,6 +12,9 @@ public class ModuleRaycasterInstaller : MonoBehaviour, IInstaller
     [Header("시간 매니저")]
     [SerializeField] private TimeManager m_time_manager;
 
+    [Header("타임라인 매니저")]
+    [SerializeField] private TimelineManager m_timeline_manager;
+
     public void Install()
     {
         InstallRaycaster();
@@ -23,6 +26,7 @@ public class ModuleRaycasterInstaller : MonoBehaviour, IInstaller
                                   DIContainer.Resolve<NoticePresenter>(),
                                   m_time_settings,
                                   m_time_manager,
-                                  DIContainer.Resolve<FadePresenter>());
+                                  DIContainer.Resolve<FadePresenter>(),
+                                  m_timeline_manager);
     }
 }

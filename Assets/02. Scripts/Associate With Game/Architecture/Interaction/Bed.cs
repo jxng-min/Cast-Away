@@ -52,6 +52,7 @@ public class Bed : RealviewObject
 
     private void ChangeState()
     {
-        GameEventBus.Publish(GameEventType.INPLAY);
+        GameEventBus.Dequeue();
+        GameEventBus.PriorityPublish();
     }
 }

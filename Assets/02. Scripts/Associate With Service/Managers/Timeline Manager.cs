@@ -30,6 +30,12 @@ public class TimelineManager : MonoBehaviour
         m_director.stopped += TimelineEndHandler;
     }
 
+    private void OnDestroy()
+    {
+        m_director.played -= TimelineBeginHandler;
+        m_director.stopped -= TimelineEndHandler;
+    }
+
     public void StartTrailer(TimelineCode code)
     {
         m_director.playableAsset = m_timeline_db.GetTimeline(code);

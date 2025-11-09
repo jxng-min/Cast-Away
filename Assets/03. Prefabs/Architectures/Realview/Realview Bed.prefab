@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 5026381799108004420}
   m_Layer: 10
   m_Name: Realview Bed
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
