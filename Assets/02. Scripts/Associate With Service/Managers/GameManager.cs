@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -28,6 +29,7 @@ public class GameManager : Singleton<GameManager>
         GameType = GameEventType.LOADING;
 
         Time.timeScale = 1f;
+
     }
 
     public void InPlay()
@@ -64,6 +66,7 @@ public class GameManager : Singleton<GameManager>
     {
         GameType = GameEventType.PAUSE;
         Time.timeScale = 0f;
+
     }
 
     public void GameClear()

@@ -17,11 +17,6 @@ public class InventoryView : MonoBehaviour, IInventoryView
         m_canvas_group = GetComponent<CanvasGroup>();
     }
 
-    private void OnDestroy()
-    {
-        m_presenter.Dispose();
-    }
-
     public void Inject(InventoryPresenter inventory_presenter)
     {
         m_presenter = inventory_presenter;

@@ -5,7 +5,7 @@ using EXPService;
 
 namespace UserService
 {
-    public class UserDataService : ISaveable, IUserService
+    public class UserDataService : IUserService
     {
         private readonly IEXPService m_exp_service;
 
@@ -13,6 +13,8 @@ namespace UserService
         private StatusData m_status;
 
         public event Action<int, int> OnUpdatedLevel;
+        public event Action<UserData> OnLoaded;
+
 
         public Vector3 Position 
         { 
@@ -64,6 +66,7 @@ namespace UserService
                 m_position = user_data.Position;
                 m_status = user_data.Status;
 
+                OnLoaded?.Invoke(user_data);
                 return true;
             }
             return false;
@@ -73,7 +76,12 @@ namespace UserService
         {
             var local_data_path = Path.Combine(Application.persistentDataPath, "User", $"UserData.json");
 
-            var user_data = new UserData(m_position,m_status);
+            m_position = DIContainer.Resolve<PlayerCtrl>().transform.position;
+            
+            var now_status = DIContainer.Resolve<PlayerStatus>();
+            m_status = new StatusData(m_status.Level, m_status.EXP, now_status.Thirst, now_status.Hunger, now_status.HP);
+
+            var user_data = new UserData(m_position, m_status);
             var json_data = JsonUtility.ToJson(user_data, true);
 
             File.WriteAllText(local_data_path, json_data);

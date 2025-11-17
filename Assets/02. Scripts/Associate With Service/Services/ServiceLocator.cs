@@ -5,6 +5,7 @@ using UserService;
 using InventoryService;
 using KeyService;
 using SettingService;
+using ItemService; 
 
 public static class ServiceLocator
 {
@@ -17,7 +18,9 @@ public static class ServiceLocator
         Register<IUserService>(new UserDataService(Get<IEXPService>()));
         Register<IInventoryService>(new IventoryDataService());
         Register<IKeyService>(new KeyDataService());
+        Register<IItemDataService>(new ItemDataService());
         Register<ISettingService>(new LocalSettingService());
+       
     }
 
     public static void Register<T>(T service)
