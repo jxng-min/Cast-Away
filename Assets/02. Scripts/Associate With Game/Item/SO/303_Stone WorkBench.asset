@@ -17,4 +17,4 @@ MonoBehaviour:
   m_name: "\uC11D\uC7AC \uC791\uC5C5\uB300"
   m_stackable: 0
   m_cool: -1
-  m_sprite: {fileID: 0}
+  m_sprite: {fileID: 21300000, guid: ae2cdb61ba95ed54e8644400a082deb2, type: 3}

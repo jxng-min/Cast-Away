@@ -26,6 +26,8 @@ public class Moduler : MonoBehaviour
     [Header("모듈러 레이의 길이")]
     [SerializeField] private float m_ray_length;
 
+    public bool Active => m_is_active;
+
     private void Update()
     {
         if(!m_is_active || m_preview_object == null)
@@ -103,7 +105,8 @@ public class Moduler : MonoBehaviour
 
         if(change_state)
         {
-            GameEventBus.Publish(GameEventType.INPLAY);
+            GameEventBus.Dequeue();
+            GameEventBus.PriorityPublish();
         }
     }
 

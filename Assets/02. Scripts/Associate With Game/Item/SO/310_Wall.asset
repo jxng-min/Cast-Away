@@ -17,5 +17,4 @@ MonoBehaviour:
   m_name: "\uBCBD"
   m_stackable: 1
   m_cool: -1
-  m_sprite: {fileID: 0}
-  m_is_default_unlocked: 1
+  m_sprite: {fileID: 21300000, guid: 3e39de15368703c459972f58ca5a4979, type: 3}

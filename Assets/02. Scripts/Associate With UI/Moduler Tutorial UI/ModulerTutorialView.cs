@@ -16,7 +16,6 @@ public class ModulerTutorialView : MonoBehaviour, IModulerTutorialView
         if(m_presenter.Active && Input.GetKeyDown(KeyCode.C))
         {
             m_presenter.CloseUI();
-            GameEventBus.Publish(GameEventType.INPLAY);
         }
     }
 

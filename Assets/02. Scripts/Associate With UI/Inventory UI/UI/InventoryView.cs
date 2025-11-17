@@ -28,16 +28,19 @@ public class InventoryView : MonoBehaviour, IInventoryView
         m_canvas_group.interactable = true; 
         m_canvas_group.blocksRaycasts = true;
 
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_HAMMER, 1);
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_AXE, 1);
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_PICKAXE, 1);
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_SPEAR, 1);
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.FISHING_ROD, 1);
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.WOOD, 3);
-        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE, 5);
+        //ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_HAMMER, 1);
+        //ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_AXE, 1);
+        //ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_PICKAXE, 1);
+        //ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE_SPEAR, 1);
+        //ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.FISHING_ROD, 1);
+        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.WOOD, 90);
+        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.STONE, 90);
         ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.WOOL, 90);
         ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.TIMBER, 90);
         ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.ROPE, 90);
+        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.FILLED_BOTTLE, 90);
+        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.COOKED_MEAT, 90);
+        ServiceLocator.Get<IInventoryService>().AddItem(ItemCode.COOKED_FISH, 90);
 
         SoundManager.Instance.PlaySFX("UI Open", false, Vector3.zero);
     }

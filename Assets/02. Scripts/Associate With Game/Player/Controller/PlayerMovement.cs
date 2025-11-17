@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(GameManager.Instance.GameType == GameEventType.INTERACTING || 
            GameManager.Instance.GameType == GameEventType.GAMEOVER ||
-           GameManager.Instance.GameType == GameEventType.GAMECLEAR)
+           GameManager.Instance.GameType == GameEventType.GAMECLEAR ||
+           GameManager.Instance.GameType == GameEventType.CUTSCENE)
         {
             return;
         }

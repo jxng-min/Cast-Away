@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_craft_name: "\uC591 \uD138 \uCE68\uB300"
   m_item_code: 308
-  m_craft_image: {fileID: 0}
+  m_craft_image: {fileID: 21300000, guid: 3d2ad22ea87331140a6f76553e8a21e3, type: 3}
   m_ingredient_list:
   - m_item: {fileID: 11400000, guid: beffd9087d4cd4043a5bd746b2125f79, type: 2}
     m_count: 5

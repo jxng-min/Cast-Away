@@ -30,7 +30,7 @@ public class ItemSwapper : MonoBehaviour
         m_shortcut_presenter.Select(0); 
     }
 
-    private void Swap(ItemCode item_code)
+    private void Swap(ItemCode item_code, int index)
     {
         foreach(var swap_data in m_swap_list)
         {
@@ -40,6 +40,7 @@ public class ItemSwapper : MonoBehaviour
             if(active)
             {
                 m_current_tool = swap_data.Item.GetComponent<BaseTool>();
+                m_current_tool.Index = index;
             }
         }
     }

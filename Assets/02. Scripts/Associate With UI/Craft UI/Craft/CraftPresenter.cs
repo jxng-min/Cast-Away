@@ -137,7 +137,11 @@ public class CraftPresenter: IPopupPresenter
         m_view.OpenUI();
 
         m_module_tutorial_presenter.CloseUI();
-        m_moduler.Deactivate(false);
+
+        if(m_moduler.Active)
+        {
+            m_moduler.Deactivate(true);
+        }
 
         ChangeFilter(m_current_type);
     }

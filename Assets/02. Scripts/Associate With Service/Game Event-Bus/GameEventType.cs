@@ -8,4 +8,5 @@ public enum GameEventType
     PAUSE = 5,
     GAMEOVER = 6,
     GAMECLEAR = 7,
+    CUTSCENE = 8,
 }

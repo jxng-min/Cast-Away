@@ -69,6 +69,13 @@ namespace UserService
                 OnLoaded?.Invoke(user_data);
                 return true;
             }
+            else
+            {
+                var user_data = new UserData();
+
+                m_position = user_data.Position;
+                m_status = user_data.Status;
+            }
             return false;
         }
 
