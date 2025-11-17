@@ -32,7 +32,7 @@ public class ItemInteractionHandler : IItemInteractionHandler
         m_slot_pointer_handler.OnPointerEnter(slot_type, offset);
 
         var item_data = m_slot_context.Get(slot_type, offset);
-        if (item_data.Code != ItemCode.NONE)
+        if (item_data != null && item_data.Code != ItemCode.NONE)
         {
             m_tooltip_presenter.OpenUI(item_data.Code);
         }
